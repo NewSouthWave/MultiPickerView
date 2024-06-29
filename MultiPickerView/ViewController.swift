@@ -41,15 +41,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         imgView.image = leftImageArr[0]
         
     }
-
+    // 피커 뷰 열 개수
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return PICKER_VIEW_COLUMN
     }
-    
+    // 피커 뷰 높이
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
         return PICKER_VIEW_HEIGHT
     }
-    
+    // 어떤 피커 뷰를 표기할지 결정
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if(pickerView == leftPickerView){ // 조건문을 통해 leftPickerView와 rightPickerView 를 구분한다
             return leftImageFile.count
